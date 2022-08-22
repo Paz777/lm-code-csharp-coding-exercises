@@ -7,7 +7,8 @@ namespace Exercises
     public class Exercise001
     {
         public string CapitalizeWord(string word)
-        { 
+        {
+            //refactor as ternary
             if (word != null && word != string.Empty)
             {
                 return char.ToUpper(word[0]) + word.Substring(1);
@@ -19,10 +20,7 @@ namespace Exercises
         }
 
         public string GenerateInitials(string firstName, string lastName)
-        {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
-        }
+            =>  firstName.Substring(0, 1) + "." + lastName.Substring(0, 1);
 
         public double AddVat(double originalPrice, double vatRate)
         {
@@ -36,8 +34,9 @@ namespace Exercises
 
         public string Reverse(string sentence)
         {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            char[] sentenceCharArray = sentence.ToCharArray();
+            Array.Reverse(sentenceCharArray);
+            return new string(sentenceCharArray);
         }
 
         public int CountLinuxUsers(List<User> users)

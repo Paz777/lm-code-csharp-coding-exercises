@@ -45,8 +45,19 @@ namespace Exercises
 
         public int CountLinuxUsers(List<User> users)
         {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+            // refactor using linq
+            int noOfLinuxUsers = 0;
+            if (users != null)
+            {
+                for (int i = 0; i < users.Count; i++)
+                {
+                    if (users[i].Type == "Linux")
+                    {
+                        noOfLinuxUsers += 1;
+                    }
+                }
+            }
+            return noOfLinuxUsers;
         }
     }
 }

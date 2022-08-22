@@ -14,9 +14,7 @@ namespace Exercises
                 return char.ToUpper(word[0]) + word.Substring(1);
             }
             else
-            {
                 return word;
-            }
         }
 
         public string GenerateInitials(string firstName, string lastName)
@@ -34,9 +32,15 @@ namespace Exercises
 
         public string Reverse(string sentence)
         {
-            char[] sentenceCharArray = sentence.ToCharArray();
-            Array.Reverse(sentenceCharArray);
-            return new string(sentenceCharArray);
+            if (sentence != null)
+            {
+                char[] sentenceCharArray = sentence.ToCharArray();
+                Array.Reverse(sentenceCharArray);
+                return new string(sentenceCharArray);
+            }
+            else
+                return sentence;
+
         }
 
         public int CountLinuxUsers(List<User> users)

@@ -7,9 +7,15 @@ namespace Exercises
     public class Exercise001
     {
         public string CapitalizeWord(string word)
-        {
-            // Replace the exception statement below with your code!
-            throw new NotImplementedException();
+        { 
+            if (word != null && word != string.Empty)
+            {
+                return char.ToUpper(word[0]) + word.Substring(1);
+            }
+            else
+            {
+                return word;
+            }
         }
 
         public string GenerateInitials(string firstName, string lastName)

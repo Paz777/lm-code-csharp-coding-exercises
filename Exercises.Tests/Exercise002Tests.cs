@@ -17,26 +17,21 @@ namespace Exercises.Tests
         [Test]
         public void IsFromManchester_Should_Return_True_If_Person_Is_From_Manchester()
         {
-            // Please uncomment the code below to run your test
-
-            //Person p1 = new Person("Peter", "Smith", "Manchester", 23);
-            //Exercise002.IsFromManchester(p1).Should().Be(true);
+            Person p1 = new Person("Peter", "Smith", "Manchester", 23);
+            Exercise002.IsFromManchester(p1).Should().Be(true);
         }
 
         [Test]
         public void IsFromManchester_Should_Return_False_If_Person_Is_Not_From_Manchester()
         {
-            // Please uncomment the code below to run your test
-
-            //Person p2 = new Person("Susan", "Farmer", "Leeds", 23);
-            //Exercise002.IsFromManchester(p2).Should().Be(false);
+            Person p2 = new Person("Susan", "Farmer", "Leeds", 23);
+            Exercise002.IsFromManchester(p2).Should().Be(false);
         }
 
         [Test]
         public void IsFromManchester_Should_Return_False_If_Person_Is_Null()
         {
-            // Please uncomment the code below to run your test
-            // Exercise002.IsFromManchester(null).Should().Be(false);
+            Exercise002.IsFromManchester(null).Should().Be(false);
         }
 
         [Test]

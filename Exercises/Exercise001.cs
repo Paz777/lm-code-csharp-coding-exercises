@@ -7,15 +7,7 @@ namespace Exercises
     public class Exercise001
     {
         public string CapitalizeWord(string word)
-        {
-            //refactor as ternary
-            if (word != null && word != string.Empty)
-            {
-                return char.ToUpper(word[0]) + word.Substring(1);
-            }
-            else
-                return word;
-        }
+            => (word != null) && (word != string.Empty) ? char.ToUpper(word[0]) + word.Substring(1) : word;
 
         public string GenerateInitials(string firstName, string lastName)
             =>  firstName.Substring(0, 1) + "." + lastName.Substring(0, 1);

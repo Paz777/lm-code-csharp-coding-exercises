@@ -37,19 +37,15 @@ namespace Exercises.Tests
         [Test]
         public void CanWatchFilm_Should_Return_False_If_Age_Is_Below_The_Age_Limit()
         {
-            // Please uncomment the code below to run your test
-
-            //Person p1 = new Person("Peter", "Smith", "Manchester", 17);
-            //Exercise002.CanWatchFilm(p1, 18).Should().Be(false);
+            Person p1 = new Person("Peter", "Smith", "Manchester", 17);
+            Exercise002.CanWatchFilm(p1, 18).Should().Be(false);
         }
 
         [Test]
         public void CanWatchFilm_Should_Return_True_If_Age_Is_EqualTo_Or_Above_The_Age_Limit()
         {
-            // Please uncomment the code below to run your test
-
-            //Person p2 = new Person("Susan", "Farmer", "Leeds", 18);
-            //Exercise002.CanWatchFilm(p2, 15).Should().Be(true);
+            Person p2 = new Person("Susan", "Farmer", "Leeds", 18);
+            Exercise002.CanWatchFilm(p2, 15).Should().Be(true);
         }
     }
 }

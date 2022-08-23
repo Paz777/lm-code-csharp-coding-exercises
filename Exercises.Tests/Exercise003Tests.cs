@@ -14,6 +14,22 @@ namespace Exercises.Tests
         }
 
         [Test]
+        public void Given_An_IceCreamFlavour_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
+        {
+            Exercise003.IceCreamCode("Pistachio").Should().Be(0);
+            Exercise003.IceCreamCode("Vanilla").Should().Be(2);
+            Exercise003.IceCreamCode("Chocolate").Should().Be(4);
+        }
+
+        [Test]
+        public void IceCreamCode_Should_Handle_Unusual_Inputs()
+        {
+            Exercise003.IceCreamCode(null).Should().Be(-1);
+            Exercise003.IceCreamCode(" ").Should().Be(-1);
+            Exercise003.IceCreamCode(string.Empty).Should().Be(-1);
+        }
+
+        [Test]
         public void Given_Chocolate_Chip_GetIceCreamCode_Should_Return_Correct_Ice_Cream_Code()
         {
             string iceCreamFlavour = "Mint Chocolate Chip";
@@ -44,7 +60,6 @@ namespace Exercises.Tests
         public void Ice_Cream_Flavours_Should_Return_All_Flavours()
         {
             string[] expected = { "Pistachio", "Raspberry Ripple", "Vanilla", "Mint Chocolate Chip", "Chocolate", "Mango Sorbet" };
-
             Exercise003.IceCreamFlavours.Should().Equal(expected);
         }
     }

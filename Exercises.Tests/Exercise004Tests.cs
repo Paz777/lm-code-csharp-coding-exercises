@@ -6,8 +6,6 @@ namespace Exercises.Tests
 {
     public class Exercise004Tests
     {
-        
-
         [Test]
         public void AddGigaSecond_Should_Return_Result_When_Only_Date_Is_Specified()
         {
@@ -32,6 +30,8 @@ namespace Exercises.Tests
             actualResult.Should().Be(expectedResult);
         }
 
+        /* Add more tests for month and year rollover */
+
         [Test]
         public void AddGigaSecond_Should_Throw_Exception_When_DateTime_Has_Incorrect_Range_Of_Value()
         {
@@ -52,7 +52,6 @@ namespace Exercises.Tests
 
             ex = Assert.Throws<ArgumentOutOfRangeException>(() => Exercise004.AddGigaSecond(new DateTime(2021, 1, 32, 23, 59, 59, 0)));
             Assert.That(ex.Message, Is.EqualTo("Year, Month, and Day parameters describe an un-representable DateTime."));
-
         }
     }
 }

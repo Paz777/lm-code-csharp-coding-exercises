@@ -65,5 +65,23 @@ namespace Exercises.Tests
         {
             Exercise005.IsPangram("the 1 quick brown fox jumps over the 2 lazy dogs").Should().Be(true);
         }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Pangram_With_Fullstops()
+        {
+            Exercise005.IsPangram("the.quick.brown.fox.jumps.over.the.lazy.dog").Should().Be(true);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_False_For_Double_LetterA_Sentence()
+        {
+            Exercise005.IsPangram("the quick brown fox jumps over the laazy dog").Should().Be(true);
+        }
+
+        [Test]
+        public void IsPangram_Should_Return_True_For_Long_Sentance()
+        {
+            Exercise005.IsPangram("the quick brown fox jumps over the lazy dog the quick brown fox jumps over the lazy dog").Should().Be(true);
+        }
     }
 }

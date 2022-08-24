@@ -73,7 +73,7 @@ namespace Exercises.Tests
         }
 
         [Test]
-        public void IsPangram_Should_Return_False_For_Double_LetterA_Sentence()
+        public void IsPangram_Should_Return_False_For_Double_Letter_A_Sentence()
         {
             Exercise005.IsPangram("the quick brown fox jumps over the laazy dog").Should().Be(true);
         }

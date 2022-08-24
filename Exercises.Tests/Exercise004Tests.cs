@@ -30,7 +30,22 @@ namespace Exercises.Tests
             actualResult.Should().Be(expectedResult);
         }
 
-        /* Add more tests for month and year rollover */
+        /* Add more tests - not sure if complete */
+        [Test]
+        public void AddGigaSecond_Should_Return_Result_When_DateTime_Is_Specified_With_Month_RollOver()
+        {
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(2021, 12, 1, 23, 59, 59, 0));
+            DateTime expectedResult = new(2053, 08, 10, 1, 46, 39);
+            actualResult.Should().Be(expectedResult);
+        }
+
+        [Test]
+        public void AddGigaSecond_Should_Return_Result_When_DateTime_Is_Specified_With_Milliseconds()
+        {
+            DateTime actualResult = Exercise004.AddGigaSecond(new DateTime(2021, 1, 5, 3, 59, 59, 99));
+            DateTime expectedResult = new(2052, 09, 13, 05, 46, 39, 99);
+            actualResult.Should().Be(expectedResult);
+        }
 
         [Test]
         public void AddGigaSecond_Should_Throw_Exception_When_DateTime_Has_Incorrect_Range_Of_Value()

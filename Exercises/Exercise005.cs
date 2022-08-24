@@ -7,8 +7,8 @@ namespace Exercises
     {
         public bool IsPangram(string input)
         {
-            const string alphabet = "abcdefghijklmnopqrstuvwxyz";
-            return alphabet.All(input.ToLower().Contains);
+            const string ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+            return ALPHABET.All(input.ToLower().Contains);
         }
     }
 }

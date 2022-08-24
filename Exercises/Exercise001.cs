@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Exercises.Models;
 
 namespace Exercises
@@ -40,20 +41,6 @@ namespace Exercises
         }
 
         public int CountLinuxUsers(List<User> users)
-        {
-            // refactor using linq
-            int noOfLinuxUsers = 0;
-            if (users != null)
-            {
-                for (int i = 0; i < users.Count; i++)
-                {
-                    if (users[i].Type == "Linux")
-                    {
-                        noOfLinuxUsers += 1;
-                    }
-                }
-            }
-            return noOfLinuxUsers;
-        }
+            => users != null ? users.Where(u => u.Type == "Linux").Count() : 0;
     }
 }

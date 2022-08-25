@@ -31,7 +31,7 @@ namespace Exercises
         {
             if (sentence != null)
             {
-                char[] sentenceCharArray = sentence.ToCharArray();
+                var sentenceCharArray = sentence.ToCharArray();
                 Array.Reverse(sentenceCharArray);
                 return new string(sentenceCharArray);
             }
